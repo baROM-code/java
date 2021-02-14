@@ -5,12 +5,7 @@ public class upr2_7 {
         int arr[] = new int[] { 1, 5, 3, 2, 11, 4, 54, 4, 8, 9, -10 };
         int stepOffsetArray  = 2;
 
-
-           for (int i = 0; i < Math.abs(stepOffsetArray); i++)
-           {
-               if (stepOffsetArray > 0) offsetArrayRightOne(arr);
-               if (stepOffsetArray < 0) offsetArrayLeftOne(arr);
-           }
+        offsetArray(arr, stepOffsetArray);
 
         for (int i = 0; i < arr.length; i++)
         {
@@ -18,6 +13,17 @@ public class upr2_7 {
         }
 
     }
+
+    public static void offsetArray(int[] a, int n)
+    {
+        for (int i = 0; i < Math.abs(n); i++)
+        {
+            if (n > 0) offsetArrayRightOne(a);
+            if (n < 0) offsetArrayLeftOne(a);
+        }
+
+    }
+
 
     public static void offsetArrayRightOne(int[] a)
     {
